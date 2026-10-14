@@ -1,0 +1,41 @@
+@startuml arhitektuur
+title Koolisöökla tellimissüsteem: komponendid (monoliit, veebirakendus)
+
+actor "Õpilane / lapsevanem" as Student
+actor "Söökla töötaja" as Staff
+
+package "Brauser" {
+  [Veebiliides\n(HTML, CSS, JavaScript)] as WebUI
+}
+
+package "Rakendusserver (monoliit)" {
+  [Autentimine\n(kooli konto)] as Auth
+  [Menüü teenus] as Menu
+  [Tellimuste teenus] as Orders
+  [Söökla vaade\n(päeva tellimused)] as StaffView
+  [API kiht\n(REST, JSON)] as API
+}
+
+database "Andmebaas\n(PostgreSQL)" as DB {
+  [kasutajad]
+  [menüü]
+  [tellimused]
+}
+
+Student --> WebUI : tellib, vaatab menüüd
+Staff --> WebUI : vaatab päeva tellimusi
+WebUI --> API : HTTPS, JSON
+API --> Auth
+API --> Menu
+API --> Orders
+API --> StaffView
+Auth --> DB : kasutajad
+Menu --> DB : menüü
+Orders --> DB : tellimused
+StaffView --> Orders : loeb päeva tellimusi
+
+note right of API
+  Kõik päringud käivad läbi API kihi.
+  Vaated ei pääse andmebaasi otse.
+end note
+@enduml
