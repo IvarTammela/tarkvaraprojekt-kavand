@@ -10,7 +10,7 @@ Prioriteedid: 1 = kõige tähtsam (MVP), 2 = esimesse versiooni, kui aega on, 3 
 | 4 | 1 | sprint-1 | Söökla töötajana soovin näha päeva tellimuste loendit, et teada, kui palju mida valmistada. | Vaates kuvatakse päeva kõik tellimused. Iga tellimuse juures on toidu nimi ja tellija. Loendit saab filtreerida toidu järgi. |
 | 5 | 2 | sprint-2 | Õpilasena soovin tellida toitu nädalaks ette, et mitte iga päev eraldi tellida. | Tellimus saab valida mitu päeva. Iga päeva kohta kuvatakse valitud toit. Tellimuse saab tühistada enne kella 9. |
 | 6 | 2 | sprint-2 | Lapsevanemana soovin näha lapse tellimusi, et teada, mida ta sööb. | Vanem näeb lapse tellimusi kuupäeva järgi. Tellimuste loendis on näha kõik viimase 30 päeva tellimused. |
-| 7 | 3 | hiljem | Söökla töötajana soovin maksta tellimuse eest veebis, et vähendada sularaha käsitlemist. | Maksmise nupp on tellimuse kinnitamisel. Edukal maksmisel saab õpilane kinnituse. Ebaõnnestunud makse korral tellimust ei salvestata. |
+| 7 | 3 | hiljem | Õpilasena soovin tellimuse eest veebis maksta, et mul ei oleks vaja sularaha kaasas kanda. | Maksmise nupp on tellimuse kinnitamisel. Edukal maksmisel saab õpilane kinnituse. Ebaõnnestunud makse korral tellimust ei salvestata. |
 
 ## Märkused
 
